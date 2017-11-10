@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///Users/emil.koutanov/Downloads/websocket.org.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title -->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="websocket.org - WebSocket technology, demos, articles, and products.">
+		<meta name="keywords" content="HTML5, WebSocket, real-time, JMS, AMQP, XMPP, MQTT, framework, ESB, message broker, messaging, streaming, stock, KWIC">
+		<meta name="author" content="Kaazing">
+		<title>websocket.org</title>
+
+		<!-- Google Fonts -->
+		<link href="./websocket.org_files/css" rel="stylesheet" type="text/css">
+		<link href="./websocket.org_files/css(1)" rel="stylesheet" type="text/css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./websocket.org_files/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="./websocket.org_files/shortcodes.css" type="text/css">
+		<link rel="stylesheet" href="./websocket.org_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./websocket.org_files/animate.css" type="text/css">
+		<link rel="stylesheet" href="./websocket.org_files/style.css" type="text/css">
+		<link rel="stylesheet" href="./websocket.org_files/orange.css" type="text/css">
+		<link rel="stylesheet" href="./websocket.org_files/prettify.css" type="text/css">
+
+		<!-- Jquery -->
+		<script type="text/javascript" async="" src="file://tag.getdrip.com/6914321.js"></script><script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="file://script.crazyegg.com/pages/scripts/0037/0800.js?419524" async="" type="text/javascript"></script><script type="text/javascript" async="" src="file://tag.getdrip.com/6914321.js"></script><script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="file://script.crazyegg.com/pages/scripts/0037/0800.js?419524" async="" type="text/javascript"></script><script type="text/javascript" async="" src="file://tag.getdrip.com/6914321.js"></script><script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="file://script.crazyegg.com/pages/scripts/0037/0800.js?419524" async="" type="text/javascript"></script><script type="text/javascript" async="" src="file://tag.getdrip.com/6914321.js"></script><script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="file://script.crazyegg.com/pages/scripts/0037/0800.js?419523" async="" type="text/javascript"></script><script type="text/javascript" async="" src="file://tag.getdrip.com/6914321.js"></script><script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="file://script.crazyegg.com/pages/scripts/0037/0800.js?419523" async="" type="text/javascript"></script><script async="" charset="utf-8" src="./websocket.org_files/saved_resource" type="text/javascript"></script><script type="text/javascript" async="" src="./websocket.org_files/6914321.js"></script><script async="" src="./websocket.org_files/analytics.js"></script><script src="./websocket.org_files/0800.js" async="" type="text/javascript"></script><script type="text/javascript" src="./websocket.org_files/jquery.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="js/html5shiv.min.js"></script>
+		  <script src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Favicons -->
+		<link rel="icon" href="http://websocket.org/img/favicon.ico">
+
+		
+		<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0037/0800.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>
+		
+
+	<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+	<body><div class="zopim" __jx__id="___$_21 ___$_21" data-test-id="ChatWidgetButton" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; right: 10px; bottom: 0px; display: none;"><iframe frameborder="0" src="./websocket.org_files/saved_resource.html" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" data-test-id="ChatWidgetButton-iframe"></iframe></div>
+
+
+
+    
+<!-- BEGIN MENU
+================================================== -->
+
+<div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://websocket.org/index.html">
+				<div class="logo-container">
+					<span class="helper"></span><img class="header-logo" src="./websocket.org_files/websocketlogo-medium.png" alt="">
+				</div>
+			</a>
+			<a class="navbar-brand" href="http://websocket.org/index.html">
+			</a>
+		</div>
+
+		<div class="navbar-collapse collapse pull-right" id="mainMenu">
+			<ul id="menu-main-menu" class="nav navbar-nav">
+				
+
+				
+				<li class="menu-item-has-children"><a href="http://websocket.org/echo.html#" class="no-scroll">Articles</a>
+					<ul class="sub-menu">
+						<li><a href="http://websocket.org/aboutwebsocket.html">About WebSocket</a></li>
+						<li><a href="http://websocket.org/quantum.html">Benefits of WebSocket</a></li>
+					</ul>
+				</li>
+
+				<li><a href="http://websocket.org/book.html">Book</a></li>
+
+				<li><a href="https://kaazing.com/download/">Download</a></li>
+
+				<li><a href="https://hub.docker.com/_/kaazing-gateway">Docker Hub Repo</a></li>
+
+				<li><a href="http://websocket.org/about.html">About</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END MENU
+================================================== -->
+
+
+    <script type="text/javascript" src="./websocket.org_files/stuff.js"></script>
+<script language="javascript" type="text/javascript">
+  function browserDetect()
+  {
+    document.getElementById("browserType").innerHTML = BrowserDetect.browser + ' ' + BrowserDetect.version;
+    document.getElementById("platform").innerHTML = BrowserDetect.OS;
+
+    if (window.WebSocket)
+    {
+      document.getElementById("wsSupportImg").src = "img/check.png"
+    }
+    else
+    {
+      document.getElementById("wsSupportImg").src = "img/cross.png"
+    }
+  }
+
+  // Handle difference for IE.
+
+  if (window.addEventListener)
+	{
+  window.addEventListener("load", browserDetect, false);
+	}
+ else if (window.attachEvent)
+	{
+    window.attachEvent("onload", browserDetect)
+	}
+</script>
+
+<!-- <div id="top-compat-box">
+ <p>Does your browser<br>support WebSocket?</p>
+ <div id="top-compat-info-box">
+   <div id="top-compat-info">
+     <span id="browserType"></span><br>
+     <span id="platform"></span>
+   </div>
+   <div id="top-compat-image">
+     <a href="echo.html"><img src="img/clear.png" id="wsSupportImg" alt="" width="25" height="25" border="0"></a>
+   </div>
+   <div class="clearfix"></div>
+ </div>
+</div> -->
+
+<section id="after-intro" class="page-wrapper light-bg active">
+  <div class="container">
+    <div class="row page-content article">
+      <h2>Echo Test</h2>
+      <p>
+      The first section of this page will let you do an HTML5 WebSocket test against the echo server. The second section walks you through creating a WebSocket application yourself.
+      </p>
+      <p>
+      You can also <a href="http://blog.kaazing.com/2012/05/09/inspecting-websocket-traffic-with-chrome-developer-tools/">inspect WebSocket messages</a> using your browser.
+      </p>
+      <h3>Try it out!</h3>
+      <div id="webSocketSupp" style="display: block;">
+          <div style="float: left;">
+            <img src="./websocket.org_files/check.png" width="36" height="36" align="absmiddle">
+          </div>
+          <div style="float: left; width: 600px; margin-left: 10px; position:relative; top: 8px;">
+            This browser supports WebSocket.
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div id="top-compat-box" style="display:none;">
+          <p>Does your browser<br>support WebSocket?</p>
+          <div id="top-compat-info-box">
+           <div id="top-compat-info">
+             <span id="browserType">Chrome 60</span><br>
+             <span id="platform">Mac</span>
+           </div>
+           <div id="top-compat-image">
+             <a href="http://websocket.org/echo.html"><img src="file:///Users/emil.koutanov/Downloads/img/check.png" id="wsSupportImg" alt="" width="25" height="25" border="0"></a>
+           </div>
+           <div class="clearfix"></div>
+          </div>
+          </div>
+
+        <div id="noWebSocketSupp">
+          <div style="float: left;">
+            <img src="./websocket.org_files/cross.png" width="36" height="36" align="absmiddle">
+          </div>
+          <div style="float: left; width: 600px; margin-left: 10px;">
+            <p>Uh-oh, the browser you're using doesn't have native support for WebSocket. That means you can't run this demo.</p>
+            <p>The following link lists the browsers that support WebSocket:</p>
+            <p><a href="http://caniuse.com/#feat=websockets">http://caniuse.com/#feat=websockets</a></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div id="echo">
+          <div id="echo-config" style="float: left;">
+            <strong>Location:</strong><br>
+            <input class="draw-border" id="wsUri" size="35">
+            <br>
+            <input class="draw-border echo-checkbox" type="checkbox" id="secureCb" onclick="toggleTls();">
+            <span id="secureCbLabel" style="font-size: smaller; color: black;">Use secure WebSocket (TLS)</span><br>
+            <button class="echo-button" id="connect">Connect</button>
+            <button class="echo-button" id="disconnect" disabled="">Disconnect</button>
+            <br>
+            <br>
+            <strong>Message:</strong><br>
+            <input class="draw-border" id="sendMessage" size="35" value="Rock it with HTML5 WebSocket" disabled="">
+            <br>
+            <button class="echo-button" id="send" disabled="">Send</button>
+          </div>
+          <div id="echo-log" style="float: left; margin-left: 20px; padding-left: 20px; width: 350px; border-left: solid 1px #cccccc;"> <strong>Log:</strong>
+            <div id="consoleLog"></div>
+            <button class="echo-button" id="clearLogBut" style="position: relative; top: 3px;">Clear log</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <h4>Instructions</h4>
+        <ol>
+          <li>
+            Press the <b>Connect</b> button.
+          </li>
+          <li>
+            Once connected, enter a message and press the <b>Send</b> button. The output will appear in the <b>Log</b> section. You can change the message and send again multiple times.
+          </li>
+          <li>
+            Press the <b>Disconnect</b> button.
+          </li>
+        </ol>
+        <b>Note:</b> In some environments the WebSocket connection may fail due to intermediary firewalls, proxies, routers, etc. In that case take advantage of WebSocket's secure capability and check <b>Use secure WebSocket (TLS)</b>. Even if you have no issues you can still feel free to test using a secure connection.
+        <br><br>
+        <h2>Creating your own test</h2>
+          <p>
+            Using a text editor, copy the following code and save it as <b>websocket.html</b> somewhere on your hard drive. Then simply open it in a browser. The page will automatically connect, send a message, display the response, and close the connection.
+          </p>
+          <pre class="prettyprint text-left">  &lt;!DOCTYPE html&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;WebSocket Test&lt;/title&gt;
+  &lt;script language="javascript" type="text/javascript"&gt;
+
+  var wsUri = "ws://echo.websocket.org/";
+  var output;
+
+  function init()
+  {
+    output = document.getElementById("output");
+    testWebSocket();
+  }
+
+  function testWebSocket()
+  {
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
+
+  function onOpen(evt)
+  {
+    writeToScreen("CONNECTED");
+    doSend("WebSocket rocks");
+  }
+
+  function onClose(evt)
+  {
+    writeToScreen("DISCONNECTED");
+  }
+
+  function onMessage(evt)
+  {
+    writeToScreen('&lt;span style="color: blue;"&gt;RESPONSE: ' + evt.data+'&lt;/span&gt;');
+    websocket.close();
+  }
+
+  function onError(evt)
+  {
+    writeToScreen('&lt;span style="color: red;"&gt;ERROR:&lt;/span&gt; ' + evt.data);
+  }
+
+  function doSend(message)
+  {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+  }
+
+  function writeToScreen(message)
+  {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+  }
+
+  window.addEventListener("load", init, false);
+
+  &lt;/script&gt;
+
+  &lt;h2&gt;WebSocket Test&lt;/h2&gt;
+
+  &lt;div id="output"&gt;&lt;/div&gt;
+          </pre>
+
+    </div>
+  </div>
+</section>
+
+<script src="./websocket.org_files/echo.js"></script>
+
+    <!-- BEGIN FOOTER
+================================================== -->
+<section class="nowidgetbottom">
+	<p id="back-top" style="display: none;">
+		
+	</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<a class="footer-logo" href="http://websocket.org/index.html">
+					<div>
+						<img class="footer-logo" src="./websocket.org_files/websocketlogo-medium-white.png" width="250" alt="">
+					</div>
+					<!-- <a class="navbar-brand" href="/index.html">
+					<div class="logo-container">
+						<span class="helper"></span><img class="header-logo" src="/img/websocketlogo-medium.png" alt=""/>
+					</div>
+				</a> -->
+				</a>
+				<br>
+				
+				<b>websocket.org</b> is powered by <a href="http://kaazing.com/">Kaazing</a> © | Copyright | All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END FOOTER
+================================================== -->
+
+
+<script src="./websocket.org_files/bootstrap.js"></script>
+<script src="./websocket.org_files/easing.js"></script>
+<!-- <script src='js/smoothscroll.js'></script> -->
+<script src="./websocket.org_files/wow.js"></script>
+<script src="./websocket.org_files/appear.js"></script>
+<script src="./websocket.org_files/fitvids.js"></script>
+<script src="./websocket.org_files/common.js"></script>
+<script src="./websocket.org_files/flexslider.js"></script>
+<script src="./websocket.org_files/countto.js"></script>
+<script src="./websocket.org_files/jquery.cycle.all.min.js"></script>
+<script src="./websocket.org_files/carousel.js"></script>
+<script src="./websocket.org_files/carousel-anything.js"></script>
+<script src="./websocket.org_files/carousel-testimonials.js"></script>
+<script src="./websocket.org_files/isotope.js"></script>
+<script src="./websocket.org_files/carousel-blog.js"></script>
+<script src="./websocket.org_files/parallax.js"></script>
+<script src="./websocket.org_files/validate.js"></script>
+<script src="./websocket.org_files/prettify.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1771436-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- Drip -->
+<script type="text/javascript">
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {};
+  _dcs.account = '6914321';
+
+  (function() {
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true;
+    dc.src = '//tag.getdrip.com/6914321.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(dc, s);
+  })();
+</script>
+
+<!-- Chat widget -->
+<iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(1).html"></iframe><iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(2).html"></iframe><iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(3).html"></iframe><iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(4).html"></iframe><iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(5).html"></iframe><iframe src="javascript:false" title="" style="display: none;" src="./websocket.org_files/saved_resource(6).html"></iframe><script>window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","kaazingsupport.zendesk.com");
+zE(function() {
+//Zopim API
+$zopim(function() {
+   $zopim.livechat.addTags("websocket_org");
+});
+//End Zopim API
+});
+</script>
+
+
+
+
+
+
+
+<script>
+    (function(d,s){var z=$zopim,$=z.s= d.createElement(s),e=d.getElementsByTagName(s)[0];
+    $.async=!0;$.setAttribute('charset','utf-8');
+    $.src='https://v2.zopim.com/?3vCaGRDlZbbiX5tJXSlIABEcEDu5cGAg';
+    z.t=+new Date;$. type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+  </script><div><iframe data-reactroot="" id="automaticAnswers" class="zEWidget-automaticAnswers" tabindex="-1" style="border: none; background: transparent; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; bottom: 0px; margin: 0px 6px 6px 0px; height: 188px; width: 410px; transition-property: none; transition-timing-function: unset; top: -9999px;" src="./websocket.org_files/saved_resource(7).html"></iframe></div><div><iframe data-reactroot="" id="ipm" class="zEWidget-ipm" tabindex="-1" style="border: none; background: transparent; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; top: -245px; margin-right: 15px; margin-top: 0px; height: 195px; width: 395px; transition-property: none; transition-timing-function: unset;" src="./websocket.org_files/saved_resource(8).html"></iframe></div><div class="zopim" __jx__id="___$_1" style="position: absolute; visibility: hidden; margin: 0px; padding: 0px; border: 0px; height: 0px; width: 0px;"></div><div class="zopim" __jx__id="___$_1" style="position: absolute; visibility: hidden; margin: 0px; padding: 0px; border: 0px; height: 0px; width: 0px;"></div><div class="zopim" __jx__id="___$_1" style="position: absolute; visibility: hidden; margin: 0px; padding: 0px; border: 0px; height: 0px; width: 0px;"></div><div class="zopim" __jx__id="___$_1" style="position: absolute; visibility: hidden; margin: 0px; padding: 0px; border: 0px; height: 0px; width: 0px;"></div><div class="zopim" __jx__id="___$_1" style="position: absolute; visibility: hidden; margin: 0px; padding: 0px; border: 0px; height: 0px; width: 0px;"></div></body></html>
